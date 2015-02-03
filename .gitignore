@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TaskBarManager/bin/Debug
+/TaskBarManager/obj/Debug
+/TaskBarManager/publish
+/TaskBarManager/TaskBarManager.csproj.user
+/TaskBarManager/TaskBarManager_TemporaryKey.pfx
+/TaskBarManager.v12.suo
