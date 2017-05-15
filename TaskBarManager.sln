@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskBarManager", "TaskBarManager\TaskBarManager.csproj", "{BA792E85-D4EE-4FC6-96CB-B64F95330C3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinTop", "WinTop\WinTop.csproj", "{E5E3BCCA-DB9F-426E-A83D-519C303D4BD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinTopConsole", "WinTopConsole\WinTopConsole.csproj", "{9E98E41F-D40F-49A1-A062-25EFF8E1C13C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{BA792E85-D4EE-4FC6-96CB-B64F95330C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA792E85-D4EE-4FC6-96CB-B64F95330C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA792E85-D4EE-4FC6-96CB-B64F95330C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5E3BCCA-DB9F-426E-A83D-519C303D4BD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5E3BCCA-DB9F-426E-A83D-519C303D4BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5E3BCCA-DB9F-426E-A83D-519C303D4BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5E3BCCA-DB9F-426E-A83D-519C303D4BD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E98E41F-D40F-49A1-A062-25EFF8E1C13C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E98E41F-D40F-49A1-A062-25EFF8E1C13C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E98E41F-D40F-49A1-A062-25EFF8E1C13C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E98E41F-D40F-49A1-A062-25EFF8E1C13C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
