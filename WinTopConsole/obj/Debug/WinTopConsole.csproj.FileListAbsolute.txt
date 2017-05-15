@@ -1,0 +1,16 @@
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTopConsole\bin\Debug\WinTopConsole.exe.config
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTopConsole\bin\Debug\WinTopConsole.exe
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTopConsole\bin\Debug\WinTopConsole.pdb
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTopConsole\bin\Debug\WinTop.dll
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTopConsole\bin\Debug\WinTop.pdb
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTopConsole\obj\Debug\WinTopConsole.csprojResolveAssemblyReference.cache
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTopConsole\obj\Debug\WinTopConsole.exe
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTopConsole\obj\Debug\WinTopConsole.pdb
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTopConsole\bin\Debug\WinTopConsole.exe.config
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTopConsole\bin\Debug\WinTopConsole.exe
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTopConsole\bin\Debug\WinTopConsole.pdb
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTopConsole\bin\Debug\WinTop.dll
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTopConsole\bin\Debug\WinTop.pdb
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTopConsole\obj\Debug\WinTopConsole.csprojResolveAssemblyReference.cache
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTopConsole\obj\Debug\WinTopConsole.exe
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTopConsole\obj\Debug\WinTopConsole.pdb

@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using WinTop;
 
 namespace TaskBarManager
 {
@@ -51,7 +45,7 @@ namespace TaskBarManager
 
         private void BtnHideTaskBar_Click(object sender, EventArgs e)
         {
-            if ((Control.ModifierKeys & Keys.Shift) != 0)
+            if ((ModifierKeys & Keys.Shift) != 0)
             {
                 Properties.Settings.Default.RememberYesToHide = false;
             }

@@ -1,0 +1,10 @@
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTop\bin\Debug\WinTop.dll
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTop\bin\Debug\WinTop.pdb
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTop\obj\Debug\WinTop.csprojResolveAssemblyReference.cache
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTop\obj\Debug\WinTop.dll
+C:\Users\quanb\Source\Repos\wintop\WinTopConsole\WinTop\obj\Debug\WinTop.pdb
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTop\obj\Debug\WinTop.dll
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTop\obj\Debug\WinTop.pdb
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTop\bin\Debug\WinTop.dll
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTop\bin\Debug\WinTop.pdb
+C:\Users\quanb\Source\Repos\taskbarmanager\taskbarmanager\WinTop\obj\Debug\WinTop.csprojResolveAssemblyReference.cache
