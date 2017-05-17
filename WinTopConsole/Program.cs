@@ -10,12 +10,12 @@ namespace WinTopConsole
         static IEnumerable<Window> GetAllMainWindows()
             => Window.FindWindows().Where(x => x.IsMain).OrderBy(x => x.Text);
 
-        static IEnumerable<Window> List(IEnumerable<Window> allwins, string start)
+        static IEnumerable<Window> List(IEnumerable<Window> allwins, Func<Window, bool> pred)
         {
-            var wins = allwins.Where(w => w.Text.StartsWith(start, StringComparison.CurrentCultureIgnoreCase));
+            var wins = allwins.Where(pred);
             foreach (var win in wins)
             {
-                Console.WriteLine($"{win.Text}");
+                Console.WriteLine($"{win.Id,10} {win.Text}  " + (win.IsTopMost ? "[T]" : string.Empty));
             }
             return wins;
         }
@@ -28,6 +28,12 @@ namespace WinTopConsole
             }
         }
 
+        static void ResetAllWindows(ref IList<Window> allwins)
+        {
+            allwins = null;
+            Window.ResetIdGenerator();
+        }
+
         static void Main(string[] args)
         {
             IList<Window> allwins = null;
@@ -36,29 +42,57 @@ namespace WinTopConsole
             while (cont)
             {
                 Console.Write(">");
-                var cmd = Console.ReadLine();
+                var cmd = Console.ReadLine().Trim().ToLower();
                 switch (cmd)
                 {
+                    case "a":
+                    case "activate":
                     case "tm":
                     case "topmost":
                     case "ntm":
                     case "notopmost":
                         {
+                            var act = cmd == "a" || cmd == "activate";
+                            var tm = cmd == "tm" || cmd == "topmost";
                             LoadAllWindowsIfNot(ref allwins);
                             Console.Write("-");
                             var title = Console.ReadLine();
-                            var wins = title == "~" ? lastwins : allwins.Where(x => x.Text.Equals(title, StringComparison.CurrentCultureIgnoreCase));
-                            var tm = cmd == "tm" || cmd == "topmost";
+                            IEnumerable<Window> wins;
+                            if (title == "*" && !tm && !act)
+                            {
+                                wins = allwins;
+                            }
+                            else if (title == "~")
+                            {
+                                wins = lastwins;
+                            }
+                            else
+                            {
+                                wins = allwins.Where(x => x.Text.Equals(title, StringComparison.CurrentCultureIgnoreCase));
+                            }
                             foreach (var win in wins)
                             {
-                                var r = tm? win.NailToTopmost() : win.RestoreFromTopmost();
-                                if (tm)
+                                bool r;
+                                if (act)
                                 {
-                                    Console.Write($"Nailing {win.Text} to topmost ... ");
+                                    r = win.BringToTop();
+                                    Console.Write($"Bring '{win.Text}' to front ... ");
+                                }
+                                else if (tm == win.IsTopMost)
+                                {
+                                    continue;
                                 }
                                 else
                                 {
-                                    Console.Write($"Take {win.Text} off from topmost ... ");
+                                    r = tm ? win.NailToTopmost() : win.RestoreFromTopmost();
+                                    if (tm)
+                                    {
+                                        Console.Write($"Nailing '{win.Text}' to topmost ... ");
+                                    }
+                                    else
+                                    {
+                                        Console.Write($"Take '{win.Text}' off from topmost ... ");
+                                    }
                                 }
                                 Console.WriteLine(r ? "succeeded" : "failed");
                             }
@@ -70,12 +104,28 @@ namespace WinTopConsole
                             LoadAllWindowsIfNot(ref allwins);
                             Console.Write("-");
                             var start = Console.ReadLine();
-                            lastwins = List(allwins, start).ToList();
+                            lastwins = List(allwins, w=>w.Text.StartsWith(start, StringComparison.CurrentCultureIgnoreCase)).ToList();
+                        }
+                        break;
+                    case "ltm":
+                        {
+                            LoadAllWindowsIfNot(ref allwins);
+                            lastwins = List(allwins, w=>w.IsTopMost).ToList();
+                        }
+                        break;
+                    case "reset":
+                        {
+                            ResetAllWindows(ref allwins);
                         }
                         break;
                     case "q":
                     case "quit":
                         cont = false;
+                        break;
+                    case "":
+                        break;
+                    default:
+                        Console.WriteLine("Unrecognized command");
                         break;
                 }
             }
